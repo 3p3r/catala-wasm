@@ -2,6 +2,8 @@
 
 [Catala](https://catala-lang.org) language parser in WebAssembly, built with [tree-sitter](https://tree-sitter.github.io) and [tree-sitter-catala](https://github.com/CatalaLang/tree-sitter-catala).
 
+**Live demo:** [https://3p3r.github.io/catala-wasm/](https://3p3r.github.io/catala-wasm/)
+
 ## Build
 
 Requires Node.js, npm, and [Rust](https://rustup.rs) (for the tree-sitter CLI).
