@@ -1,0 +1,35 @@
+{
+  "name": "catala-wasm",
+  "version": "1.0.0",
+  "description": "catala language parser in webassembly",
+  "scripts": {
+    "build": "NODE_OPTIONS='--import tsx' zx ./build.zx.ts",
+    "serve": "npx -y http-serve --cors dist",
+    "format": "biome format --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3p3r/catala-wasm.git"
+  },
+  "keywords": [
+    "catala",
+    "wasm",
+    "parser",
+    "language",
+    "tree-sitter",
+    "webassembly"
+  ],
+  "author": "Sepehr Laal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/3p3r/catala-wasm/issues"
+  },
+  "homepage": "https://github.com/3p3r/catala-wasm#readme",
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.4",
+    "@types/node": "^25.3.0",
+    "tree-sitter-cli": "^0.24.7",
+    "tsx": "^4.21.0",
+    "zx": "^8.8.5"
+  }
+}
