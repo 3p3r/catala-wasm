@@ -142,7 +142,10 @@ async function main() {
 
   let indexHtml = readFileSync(playgroundHtmlPath, "utf8")
     .replace(/THE_LANGUAGE_NAME/g, "Catala")
-    .replace(/LANGUAGE_BASE_URL = "[^"]*";/, 'LANGUAGE_BASE_URL = "";');
+    .replace(
+      /LANGUAGE_BASE_URL = "[^"]*";/,
+      'LANGUAGE_BASE_URL = (function(){ var p = window.location.pathname; if (/\\/catala-wasm(\\/|$)/.test(p)) return "/catala-wasm"; return ""; })();',
+    );
   const selectOptionMatch = indexHtml.match(
     /<select id="language-select"[^>]*>[\s\S]*?<\/select>/,
   );
