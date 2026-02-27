@@ -2,11 +2,15 @@
   "name": "catala-wasm",
   "version": "1.0.0",
   "description": "catala language parser in webassembly",
+  "main": "dist/catala_web_interpreter.bc.js",
   "scripts": {
     "build": "NODE_OPTIONS='--import tsx' zx ./build.zx.ts",
     "serve": "npx -y http-serve --cors dist",
     "format": "biome format --write"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/3p3r/catala-wasm.git"
